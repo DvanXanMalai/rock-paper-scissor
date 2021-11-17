@@ -8,27 +8,32 @@
 </head>
 <body>
     <script>
-        let playerselection=(window.prompt('enter your choice'));
         let choice=['rock','paper','scissor'];
+        let playerselection=(window.prompt('enter your choice'));
+        
         function computerchoice(){
             return choice[Math.floor(Math.random()*choice.length)];
         }
-        playerselection=playerselection.toLowerCase();
-        console.log(playerselection);
-        console.log(computerchoice(choice));
-            if(playerselection==='rock' && choice==='paper'){
-                console.log('computer wins');
-            }
-            else if(playerselection==='rock' && choice==='scissor'){
-                console.log('player wins');
-            }
-            else if(playerselection==='rock' && choice==='rock'){
-                console.log('draw');
         
-            }
-            else{
-                console.log('not working');
-            }
+        playerselection = playerselection.toLowerCase();
+        computerselection = computerchoice();
+        
+        console.log(playerselection);
+        console.log(computerselection);
+        
+        if(playerselection==='rock' && computerselection==='paper'){
+            console.log('computer wins');
+        }
+        else if(playerselection==='rock' && computerselection==='scissor'){
+            console.log('player wins');
+        }
+        else if(playerselection==='rock' && computerselection==='rock'){
+            console.log('draw');
+        
+        }
+        else{
+            console.log('not working');
+        }
     </script>
 </body>
 </html>

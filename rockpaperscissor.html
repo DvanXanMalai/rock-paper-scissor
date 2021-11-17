@@ -8,19 +8,14 @@
 </head>
 <body>
     <script>
-        const playerselection=(window.prompt('enter your choice'));
+        let playerselection=(window.prompt('enter your choice'));
         let choice=['rock','paper','scissor'];
         function computerchoice(){
             return choice[Math.floor(Math.random()*choice.length)];
         }
-        function lower(playerselection){
-            playerselection.toLowerCase();
-            return playerselection;
-        }
-        lower(playerselection);
+        playerselection=playerselection.toLowerCase();
         console.log(playerselection);
         console.log(computerchoice(choice));
-        function playround(playerselection,computerchoice){
             if(playerselection==='rock' && choice==='paper'){
                 console.log('computer wins');
             }
@@ -29,9 +24,11 @@
             }
             else if(playerselection==='rock' && choice==='rock'){
                 console.log('draw');
+        
             }
-        }
-        playround(playerselection,computerchoice);
+            else{
+                console.log('not working');
+            }
     </script>
 </body>
 </html>
